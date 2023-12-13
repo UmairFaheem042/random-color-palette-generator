@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    min-height: 100dvh;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  button {
+    border: none;
+    background: none;
+    outline: none;
+    color: inherit;
+  }
+  
+  .container {
+    height: 100dvh;
+  }
+  
+  .instruction {
+    font-weight: 400;
+    color: #aaa;
+    font-size: 1.2rem;
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    transition: 0.3s;
+  }
+  
+  .generatorBtn {
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 10px 1rem;
+    color: #656565;
+    transition: 0.3s ease;
+    font-size: inherit;
+    display: flex;
+    align-items:center;
+    background-color: #fff;
+    justify-content:center;
+    transition: 0.2s ease;
+  }
+  .generatorBtn:hover{
+    color: #111;
+  }
+  
+  .colors {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    height: 100%;
+  }
+  
+  .color {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    height: 100%;
+    flex: 1;
+    background-color: #1a1a1a;
+    color: #fff;
+    transition: 0.3s ease;
+    border: 2px solid transparent;
+  }
+  
+  .color.copied {
+    border-color: rgb(162, 0, 255);
+  }
+  
+  .color-input {
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 500;
+    width: 100%;
+  }
+  
+  .lock-toggle,
+  .copy-hex {
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0 10px;
+  }
+  .lock-toggle {
+    opacity: 50%;
+    transition: 0.3s ease;
+  }
+  
+  .lock-toggle.is-Locked {
+    opacity: 1;
+  }
+  
+  @media (min-width: 1024px) {
+    .container {
+      min-height: 100vh;
+    }
+    .colors {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .color {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .instruction {
+      font-size: 1.125rem;
+      left: 50%;
+      right: 50%;
+      bottom: 0;
+      transform: translate(-50%, -50%);
+      width: max-content;
+      height: 50px;
+    }
+  }
+  
